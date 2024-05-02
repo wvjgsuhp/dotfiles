@@ -11,6 +11,8 @@ local function update_font_size(window)
   local is_4k = window:get_dimensions().pixel_width == 3840
   if is_4k then
     font_size = 11
+  else
+    font_size = default_font_size
   end
   overrides.font_size = font_size
   window:set_config_overrides(overrides)
